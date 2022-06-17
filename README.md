@@ -13,7 +13,9 @@ The solutions will be automatically generated within a folder... Change the numb
 
 Number of instances refer to the number of times the ATSAH will be called for 1 DataSet...
 
-For the 150 Nodes Data; The Number of Vehicles for each Vehicle Types will need to be increased to obtain feasible solutions...
+*******************************************************************************************************************
+
+For the 150 Nodes Data; The Number of Vehicles for each Vehicle Type will need to be increased (in the Excel File for the Vehicle Types) to obtain feasible solutions...
 
 *******************************************************************************************************************
 
