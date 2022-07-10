@@ -107,7 +107,7 @@ class Generator:
         wb.save(str(destination_to_save_Distance_Matrix)+"Network Distance Matrix.xlsx")
 
     # Generating the Combinations as per the data available in the paper
-    # here if p=0, then Random Distances are assigned in between p=1 and p=2, Otherwise the provided value of p ia used for computation of the Lp norm
+    # here if p=0, then Random Distances are assigned in between p=1 and p=2, Otherwise the provided value of p is used for computation of the Lp norm
     #def Lp_Norm_Random_Matrix_for_each_Vehicle_Type_Generator(p=0,directory_containing_Vehicle_Types="",location_of_Node_Locations_file="Node Specifications.xlsx",sheet_name_in_Node_Locations_file_containing_CoOrdinates="Locations, PickUp & Delivery",destination_to_save_Distance_Matrix=""):
     def Lp_Norm_Random_Matrix_for_each_Vehicle_Type_Generator(p=0,Vehicle_Types=[],directory_containing_Node_Locations_File="",sheet_name_in_Node_Locations_file_containing_CoOrdinates="Locations, PickUp & Delivery",destination_to_save_Distance_Matrix=""):
         location_of_Node_Locations_file=directory_containing_Node_Locations_File+"Node Specifications.xlsx"
@@ -139,7 +139,7 @@ class Generator:
                             cell = ws.cell(row= row_number, column = 3)
                             if pp==0:
                                 p=random()+1
-                            cell.value = ((row1["Latitude"]-row2["Latitude"])**p+(row1["Longitude"]-row2["Longitude"])**p)**(1/p)
+                            cell.value = ((abs(row1["Latitude"]-row2["Latitude"]))**p+(abs(row1["Longitude"]-row2["Longitude"]))**p)**(1/p)
             # This Distance Matrices can take random distances between Euclidean and Manhatan Distances which correspond to different network layers being used by different Vehicle Types
         del wb["Sheet"]
         wb.save(str(destination_to_save_Distance_Matrix)+"Network Distance Matrix.xlsx")

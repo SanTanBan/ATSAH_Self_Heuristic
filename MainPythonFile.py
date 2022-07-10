@@ -2,8 +2,10 @@ import winsound
 import os
 import openpyxl
 from ATSAH import ATS_Algorithm_Heuristic
-#from PuLP_Algorithm import PuLP_Algorithm
-
+from Gurobi_Algorithm import Gurobi_Algorithm
+from PuLP_Algorithm import PuLP_Algorithm
+import GeneRead
+"""
 num_of_instances=7
 array_of_instances = [i for i in range(num_of_instances)]
 
@@ -74,3 +76,24 @@ for instance in array_of_instances:
 for i in range(3):
     winsound.Beep(425, 125)
     winsound.Beep(575, 175)
+
+
+objec,Vehicle_Type_Max_Utilised_Cap,Vehicles_used_each_Type=PuLP_Algorithm(max_seconds_allowed_for_calculation=9999)
+print(objec,Vehicle_Type_Max_Utilised_Cap,Vehicles_used_each_Type)
+
+for i in range(3):
+    winsound.Beep(425, 125)
+    winsound.Beep(575, 175)
+
+
+"""
+objec,Vehicle_Type_Max_Utilised_Cap,Vehicles_used_each_Type=Gurobi_Algorithm(max_seconds_allowed_for_calculation=6666)
+print(objec,Vehicle_Type_Max_Utilised_Cap,Vehicles_used_each_Type)
+
+for i in range(3):
+    winsound.Beep(425, 125)
+    winsound.Beep(575, 175)
+
+
+#GeneRead.Generator.Node_Generator(250,latitude_uniform_distribution_upper_bound=50,pickup_quantity_uniform_distribution_upper_bound=100,longitude_uniform_distribution_upper_bound=50,delivery_quantity_uniform_distribution_upper_bound=100)
+#GeneRead.Generator.Lp_Norm_Random_Matrix_for_each_Vehicle_Type_Generator(p=2,Vehicle_Types=[2,4])
