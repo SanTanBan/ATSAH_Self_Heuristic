@@ -5,7 +5,8 @@ import os
 from random import random,randint,shuffle
 import GeneRead
 from math import pow
-
+import matplotlib
+matplotlib.use("Agg")
 
 def ATS_Algorithm_Heuristic(directory_details_for_saving="",directory_containing_Vehicle_Types_file="",directory_containing_Node_Locations_file="",directory_containing_Distance_Matrix_file=""):
 
